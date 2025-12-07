@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Mango’s Library – Omniscient Reader</title>
+  <title>Mango's Library – Omniscient Reader</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="styles.css" />
   <script src="app.js" defer></script>
@@ -22,7 +22,7 @@
         <label for="seriesFilter">Series:</label>
         <select id="seriesFilter"></select>
       </div>
-      <div>
+      <div class="controls-search">
         <label for="searchInput">Search chapter:</label>
         <input id="searchInput" type="text" placeholder="e.g. chapter 10" />
       </div>
@@ -36,15 +36,24 @@
           <thead>
             <tr>
               <th>#</th>
-              <th>Volume</th>
-              <th>Manga chapter label</th>
-              <th>Format</th>
+              <th>Manga vol</th>
+              <th>Manga chapter</th>
+              <th>LN vol</th>
+              <th>LN chapter</th>
+              <th class="col-format">Format</th>
             </tr>
           </thead>
           <tbody>
             <!-- rows injected by JS -->
           </tbody>
         </table>
+      </div>
+    </section>
+
+    <section id="detailSection" class="detail hidden">
+      <h3>Mapping detail</h3>
+      <div id="detailContent" class="detail-content">
+        <p>Select a row in the table to see more information.</p>
       </div>
     </section>
   </main>
